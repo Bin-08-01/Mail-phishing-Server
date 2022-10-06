@@ -4,7 +4,7 @@
         <h3>Email của bạn</h3>
         <input type="email" name="email-register" placeholder="Your Email ...">
         <h3>Mật khẩu của ứng dụng mail</h3>
-        <a href="?page=guide" style="font-size: 14px;">Xem cách lấy mật khẩu ứng dụng mail</a>
+        <a href="https://www.youtube.com/watch?v=J4CtP1MBtOE" style="font-size: 14px;">Xem cách lấy mật khẩu ứng dụng mail</a>
         <input type="text" name="password-app" placeholder="Your password app mail ..." autocomplete="on">
 
         <button type="submit" class="btn btn-primary">Gửi</button>
