@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
+    <title>Document</title>
+    <style>
+        *, *::after, *::before{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            margin: 20px 0;
+        }
+        p{
+            margin-top: 10px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            padding: 6px 0 6px 8px;
+            margin: 8px 0 16px 0;
+        }
+        input[name="file"]{
+            border: 1px solid #999;
+        }
+        button{
+            margin-bottom: 40px;
+            width: 48px;
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <form action="mail.php" enctype="multipart/form-data" method="POST">
+        <h1>Email tới bạn</h1>
+        <p>Email</p>
+        <input type="text" class="form-control" name="email" placeholder="Email">
+        <p>Subject</p>
+        <input type="text" class="form-control" name="tieude" placeholder="ten">
+        <textarea name="content" id="editor" class="form-control"></textarea>
+        <script>
+            CKEDITOR.replace('editor');
+        </script>
+        <p>File đính kèm</p>
+        <input type="file" class="form-control" name="file">
+        <button type="submit" class="btn btn-primary">Gửi</button>
+    </form>
+</div>
+</body>
+</html>
