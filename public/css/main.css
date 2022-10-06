@@ -1,0 +1,35 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    margin: 20px 0;
+}
+p{
+    margin-top: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    padding: 6px 0 6px 8px;
+    margin: 8px 0 16px 0;
+}
+input[name="file"]{
+    border: 1px solid #999;
+}
+button{
+    margin-bottom: 40px;
+    width: 48px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
