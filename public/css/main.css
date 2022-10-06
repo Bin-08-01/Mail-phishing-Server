@@ -3,9 +3,13 @@
     margin: 0;
     padding: 0;
 }
+
 .container{
+    min-height: 100vh;
+    margin-top: 5vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 h1{
     margin: 20px 0;
@@ -20,6 +24,7 @@ form{
 input{
     padding: 6px 0 6px 8px;
     margin: 8px 0 16px 0;
+    border-radius: 10px;
 }
 input[name="file"]{
     border: 1px solid #999;
@@ -32,4 +37,7 @@ button{
     border: none;
     padding: 8px 12px;
     border-radius: 10px;
+}
+a{
+    text-decoration: none;
 }

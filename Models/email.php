@@ -5,6 +5,7 @@ use JetBrains\PhpStorm\Pure;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+
 require 'vendor/autoload.php';
 
 require_once "Models/register.php";
@@ -49,8 +50,7 @@ class Email
             $titleMain = $title;
 
             foreach ($email_array as $each) {
-                $to = $each;
-                $this->email->addAddress($to, $to_name);
+                $this->email->addAddress($each, $to_name);
             }
             $this->email->isHTML(true);
             $this->email->Subject = $titleMain;
