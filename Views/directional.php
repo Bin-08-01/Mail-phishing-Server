@@ -8,9 +8,9 @@ switch ($route) {
         $act = $_GET["act"] ?? "";
         if($email && $password){
             if($act=="option1"){
-
+                require_once "Home/option1.php";
             }elseif ($act=="option2"){
-                require_once "Home/home.php";
+                require_once "Home/option2.php";
             }else{
                 require_once "Home/middle.php";
             }

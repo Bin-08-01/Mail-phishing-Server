@@ -19,9 +19,14 @@
         top: 0;
         align-items: center;
         justify-content: space-between;
-        background-color: white;
+        background-color: black;
         border-bottom: 1px solid #999;
         padding: 8px 0;
+
+    }
+    nav *{
+        color: #ffffff;
+
     }
     nav .home-div{
         margin-left: 16px;
@@ -34,6 +39,7 @@
     }
     nav .user-info a{
         margin-right: 16px;
+        color: #ffffff;
     }
 </style>
 
