@@ -4,6 +4,7 @@ require_once "Models/register.php";
 
 class RegisterController
 {
+    private $registerModel;
     public function __construct()
     {
     }
@@ -17,8 +18,13 @@ class RegisterController
     {
         $email = $_POST['email-register'];
         $password = $_POST['password-app'];
-        $registerModel = new Register($email, $password);
-        $registerModel->register($email, $password);
+        $this->registerModel = new Register($email, $password);
+        $this->registerModel->register();
         header("location: ?page=home");
+    }
+
+    public function logout(){
+        $this->registerModel = new Register($_SESSION['email'], $_SESSION['password']);
+        $this->registerModel->logout();
     }
 }

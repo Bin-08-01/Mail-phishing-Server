@@ -9,7 +9,7 @@ class EmailController{
     public function sendEmail(): void
     {
         $EmailModel = new Email();
-        $email = $_POST['email'];
+        $email = $_POST['emails'];
         $title = $_POST['title'];
         $content = $_POST['content'];
         $file = $_FILES['file']['name'];

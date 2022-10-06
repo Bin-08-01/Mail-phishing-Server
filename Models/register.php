@@ -8,6 +8,11 @@ class Register{
         $this->password = $password;
     }
 
+    public function __destruct()
+    {
+
+    }
+
     /**
      * @return string
      */
@@ -42,9 +47,14 @@ class Register{
 
 
 
-    public function register($email, $password): void
+    public function register(): void
     {
-        $_SESSION['email'] = $email;
-        $_SESSION['password'] = $password;
+        $_SESSION['email'] = $this->email;
+        $_SESSION['password'] = $this->password;
+    }
+
+    public function logout(){
+        unset($_SESSION['email'], $_SESSION['password']);
+        header("location: ?page=home");
     }
 }

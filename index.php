@@ -20,8 +20,13 @@ switch ($route){
         $Email_obj = new EmailController();
         try {
             $Email_obj->sendEmail();
-        } catch (\PHPMailer\PHPMailer\Exception $e) {
+        } catch (Exception $e) {
             die($e);
         }
+        break;
+    case "logout":
+        require_once "Controllers/RegisterController.php";
+        $Register_object = new RegisterController();
+        $Register_object->logout();
         break;
 }
