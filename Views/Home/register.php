@@ -10,7 +10,6 @@
         <button type="submit" class="btn btn-primary">Gửi</button>
     </form>
 </div>
-
 <style>
     #register-container{
         border: 1px solid #000000;
